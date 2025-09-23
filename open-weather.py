@@ -12,4 +12,10 @@ url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid
 response = requests.get(url)
 response.raise_for_status()
 data = response.json()
-print(data)
+dados = {
+    "cidade": data["name"],
+    "temperatura": data["main"]["temp"],
+    "descricao": data["weather"][0]["description"],
+    "velocidade_vento": data["wind"]["speed"]
+    }
+print(dados)
