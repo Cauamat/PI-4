@@ -1,12 +1,13 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-with open("api_key.txt", "r") as file:
-    api_key = file.read().strip()
+load_dotenv()
+api_key = os.getenv("API_KEY")
 
 lat = -23.533773 # Latitude de São Paulo
 lon = -46.625290 # Longitude de São Paulo
-
-url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}"
+url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&lang=pt_br&units=metric"
 
 response = requests.get(url)
 response.raise_for_status()
