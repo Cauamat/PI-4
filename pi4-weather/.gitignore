@@ -1,0 +1,42 @@
+# Ambiente virtual
+.venv/
+venv/
+ENV/
+
+# Configurações locais
+.env
+.env.*
+
+# Dados (não versionar os brutos)
+data/
+logs/
+
+# Modelos treinados
+models/
+
+# Cache e temporários
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Arquivos do Jupyter/Streamlit
+.ipynb_checkpoints/
+.streamlit/
+
+# Arquivos de build/IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Relatórios temporários
+*.log
+*.tmp
+
+# Arquivos do sistema
+*.swp
+*.bak
